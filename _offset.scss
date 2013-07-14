@@ -48,7 +48,7 @@ $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 2 */
 @each $columns in $bits-offset-columns {
   @for $position from 1 through $columns - 1 {
     .#{$bits-utils-ns}u-before#{$position}of#{$columns} {
-      margin-left: (100 / ($columns / $position)) + unquote("%");
+      margin-left: percentage(1 / ($columns / $position));
     }
   }
 }
@@ -85,7 +85,7 @@ $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 2 */
 @each $columns in $bits-offset-columns {
   @for $position from 1 through $columns - 1 {
     .#{$bits-utils-ns}u-after#{$position}of#{$columns} {
-      margin-right: (100 / ($columns / $position)) + unquote("%");
+      margin-right: percentage(1 / ($columns / $position));
     }
   }
 }
