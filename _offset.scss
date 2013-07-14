@@ -8,11 +8,11 @@
  *
  * It is recommended to override these.
  *
- * 1. Namespace of bits.css's classes.
+ * 1. Utility namespace.
  * 2. List of column variations
  */
 
-$bits-ns: 'bits-' !default; /* 1 */
+$bits-utils-ns: 'bits-' !default; /* 1 */
 $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 2 */
 
 /* Proportional offset before
@@ -47,7 +47,7 @@ $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 2 */
 
 @each $columns in $bits-offset-columns {
   @for $position from 1 through $columns - 1 {
-    .#{$bits-ns}u-before#{$position}of#{$columns} {
+    .#{$bits-utils-ns}u-before#{$position}of#{$columns} {
       margin-left: (100 / ($columns / $position)) + unquote("%");
     }
   }
@@ -84,7 +84,7 @@ $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 2 */
 
 @each $columns in $bits-offset-columns {
   @for $position from 1 through $columns - 1 {
-    .#{$bits-ns}u-after#{$position}of#{$columns} {
+    .#{$bits-utils-ns}u-after#{$position}of#{$columns} {
       margin-right: (100 / ($columns / $position)) + unquote("%");
     }
   }
