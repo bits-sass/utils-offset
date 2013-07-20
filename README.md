@@ -1,14 +1,14 @@
-# Bits.scss utilities: offset
+# Bits.sass utilities: offset
 
-Utility classes for offsetting elements. See [other utilities](https://github.com/bits-scss/utils).
+Utility classes for offsetting elements. See [other utilities](https://github.com/bits-sass/utils).
 
-Read more about [Bits.scss toolkit](https://github.com/bits-scss/bits.scss).
+Read more about [Bits.sass toolkit](https://github.com/bits-sass/bits.sass).
 
 ## Installation
 
-* __Bower:__ `bower install --save bits-scss-utils-offset`
-* __Download:__ [zip](https://github.com/bits-scss/utils-offset/zipball/master), [tar.gz](https://github.com/bits-scss/utils-offset/tarball/master)
-* __Git:__ `git clone https://github.com/bits-scss/utils-offset.git`
+* __Bower:__ `bower install --save bits-sass-utils-offset`
+* __Download:__ [zip](https://github.com/bits-sass/utils-offset/zipball/master), [tar.gz](https://github.com/bits-sass/utils-offset/tarball/master)
+* __Git:__ `git clone https://github.com/bits-sass/utils-offset.git`
 
 ## Available SASS variables
 
