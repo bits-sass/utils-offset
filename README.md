@@ -21,7 +21,7 @@ See [demo](https://rawgithub.com/bits-sass/utils-offset/master/demo/index.html).
 
 ## Available utility classes
 
-* `u-beforeXofY` (adjustable) - specifies the proportional offset after an object
+* `u-beforeXofY` (adjustable) - specifies the proportional offset before an object
 * `u-afterXofY` (adjustable) - specifies the proportional offset after an object
 
 ## Requirements
