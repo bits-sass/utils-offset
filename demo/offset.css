@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Offset utilities
+   ========================================================================== */
+/**
+ * Variables
+ *
+ * It is recommended to override these.
+ *
+ * 1. Utility namespace.
+ */
+/* 1 */
+/**
+ * Offset
+ *
+ * 1. List of column variations.
+ */
+/* 1 */
+/* -------------------------------------------------------------------------- */
+/**
+ * Proportional offset before
+ *
+ * Specifies the proportional offset before an object.
+ * Intentional redundancy build into each set of unit classes.
+ *
+ * --------------
+ * Example usage:
+ * --------------
+ *
+ * <div class="Module u-size2of4 u-before1of4">
+ *   ...
+ * </div>
+ */
+/**
+ * Proportional offset after
+ *
+ * Specify the proportional offset after an object.
+ * Intentional redundancy build into each set of unit classes.
+ *
+ * --------------
+ * Example usage:
+ * --------------
+ *
+ * <div class="Module u-size1of4 u-after2of4">
+ *   ...
+ * </div>
+ * <div class="Module u-size1of4">
+ *   ...
+ * </div>
+ */
+/* Utilities generator
+   ========================================================================== */
+/**
+ * Unique values
+ */
+/**
+ * Generate 'before' utils
+ */
+.bits-u-before1of2, .bits-u-before2of4, .bits-u-before3of6, .bits-u-before4of8, .bits-u-before5of10, .bits-u-before6of12 {
+  margin-left: 50% !important; }
+
+.bits-u-before1of3, .bits-u-before2of6, .bits-u-before4of12 {
+  margin-left: 33.33333% !important; }
+
+.bits-u-before2of3, .bits-u-before4of6, .bits-u-before8of12 {
+  margin-left: 66.66667% !important; }
+
+.bits-u-before1of4, .bits-u-before2of8, .bits-u-before3of12 {
+  margin-left: 25% !important; }
+
+.bits-u-before3of4, .bits-u-before6of8, .bits-u-before9of12 {
+  margin-left: 75% !important; }
+
+.bits-u-before1of5, .bits-u-before2of10 {
+  margin-left: 20% !important; }
+
+.bits-u-before2of5, .bits-u-before4of10 {
+  margin-left: 40% !important; }
+
+.bits-u-before3of5, .bits-u-before6of10 {
+  margin-left: 60% !important; }
+
+.bits-u-before4of5, .bits-u-before8of10 {
+  margin-left: 80% !important; }
+
+.bits-u-before1of6, .bits-u-before2of12 {
+  margin-left: 16.66667% !important; }
+
+.bits-u-before5of6, .bits-u-before10of12 {
+  margin-left: 83.33333% !important; }
+
+.bits-u-before1of8 {
+  margin-left: 12.5% !important; }
+
+.bits-u-before3of8 {
+  margin-left: 37.5% !important; }
+
+.bits-u-before5of8 {
+  margin-left: 62.5% !important; }
+
+.bits-u-before7of8 {
+  margin-left: 87.5% !important; }
+
+.bits-u-before1of10 {
+  margin-left: 10% !important; }
+
+.bits-u-before3of10 {
+  margin-left: 30% !important; }
+
+.bits-u-before7of10 {
+  margin-left: 70% !important; }
+
+.bits-u-before9of10 {
+  margin-left: 90.0% !important; }
+
+.bits-u-before1of12 {
+  margin-left: 8.33333% !important; }
+
+.bits-u-before5of12 {
+  margin-left: 41.66667% !important; }
+
+.bits-u-before7of12 {
+  margin-left: 58.33333% !important; }
+
+.bits-u-before11of12 {
+  margin-left: 91.66667% !important; }
+
+/**
+ * Generate 'after' utils
+ */
+.bits-u-after1of2, .bits-u-after2of4, .bits-u-after3of6, .bits-u-after4of8, .bits-u-after5of10, .bits-u-after6of12 {
+  margin-right: 50% !important; }
+
+.bits-u-after1of3, .bits-u-after2of6, .bits-u-after4of12 {
+  margin-right: 33.33333% !important; }
+
+.bits-u-after2of3, .bits-u-after4of6, .bits-u-after8of12 {
+  margin-right: 66.66667% !important; }
+
+.bits-u-after1of4, .bits-u-after2of8, .bits-u-after3of12 {
+  margin-right: 25% !important; }
+
+.bits-u-after3of4, .bits-u-after6of8, .bits-u-after9of12 {
+  margin-right: 75% !important; }
+
+.bits-u-after1of5, .bits-u-after2of10 {
+  margin-right: 20% !important; }
+
+.bits-u-after2of5, .bits-u-after4of10 {
+  margin-right: 40% !important; }
+
+.bits-u-after3of5, .bits-u-after6of10 {
+  margin-right: 60% !important; }
+
+.bits-u-after4of5, .bits-u-after8of10 {
+  margin-right: 80% !important; }
+
+.bits-u-after1of6, .bits-u-after2of12 {
+  margin-right: 16.66667% !important; }
+
+.bits-u-after5of6, .bits-u-after10of12 {
+  margin-right: 83.33333% !important; }
+
+.bits-u-after1of8 {
+  margin-right: 12.5% !important; }
+
+.bits-u-after3of8 {
+  margin-right: 37.5% !important; }
+
+.bits-u-after5of8 {
+  margin-right: 62.5% !important; }
+
+.bits-u-after7of8 {
+  margin-right: 87.5% !important; }
+
+.bits-u-after1of10 {
+  margin-right: 10% !important; }
+
+.bits-u-after3of10 {
+  margin-right: 30% !important; }
+
+.bits-u-after7of10 {
+  margin-right: 70% !important; }
+
+.bits-u-after9of10 {
+  margin-right: 90.0% !important; }
+
+.bits-u-after1of12 {
+  margin-right: 8.33333% !important; }
+
+.bits-u-after5of12 {
+  margin-right: 41.66667% !important; }
+
+.bits-u-after7of12 {
+  margin-right: 58.33333% !important; }
+
+.bits-u-after11of12 {
+  margin-right: 91.66667% !important; }

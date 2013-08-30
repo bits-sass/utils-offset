@@ -1,6 +1,8 @@
 === HEAD
 
 * Optimize rules generator
+* Add demo page
+
 === 0.3.2 (July 20, 2013)
 
 * Rename organization's name to 'Bits.sass'

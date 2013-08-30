@@ -10,6 +10,10 @@ Read more about [Bits.sass toolkit](https://github.com/bits-sass/bits.sass).
 * __Download:__ [zip](https://github.com/bits-sass/utils-offset/zipball/master), [tar.gz](https://github.com/bits-sass/utils-offset/tarball/master)
 * __Git:__ `git clone https://github.com/bits-sass/utils-offset.git`
 
+## Demo
+
+See [demo](https://rawgithub.com/bits-sass/utils-offset/master/demo/index.html).
+
 ## Available SASS variables
 
 * `bits-utils-ns` - utilities namespace, defaults to 'bits-'
