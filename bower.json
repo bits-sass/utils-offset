@@ -2,5 +2,8 @@
   "name": "bits-sass-utils-offset",
   "version": "0.3.2",
   "author": "Lukáš Mladý",
-  "main": "_offset.scss"
+  "main": "_offset.scss",
+  "ignore": [
+    "demo"
+  ]
 }
