@@ -9,83 +9,121 @@
  * It is recommended to override these.
  *
  * 1. Utility namespace.
- * 2. List of column variations
  */
 
 $bits-utils-ns: 'bits-' !default; /* 1 */
-$bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 2 */
 
-/* Proportional offset before
+/**
+ * Offset
+ *
+ * 1. List of column variations.
+ */
+
+$bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 1 */
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Proportional offset before
+ *
+ * Specifies the proportional offset before an object.
+ * Intentional redundancy build into each set of unit classes.
+ *
+ * --------------
+ * Example usage:
+ * --------------
+ *
+ * <div class="Module u-size2of4 u-before1of4">
+ *   ...
+ * </div>
+ */
+
+/**
+ * Proportional offset after
+ *
+ * Specify the proportional offset after an object.
+ * Intentional redundancy build into each set of unit classes.
+ *
+ * --------------
+ * Example usage:
+ * --------------
+ *
+ * <div class="Module u-size1of4 u-after2of4">
+ *   ...
+ * </div>
+ * <div class="Module u-size1of4">
+ *   ...
+ * </div>
+ */
+
+
+
+/* Utilities generator
    ========================================================================== */
 
 /**
- * Specifies the proportional offset before an object
- *
- * Intentional redundancy build into each set of unit classes.
- *
- * ---------------
- * Example output:
- *
- * .bits-u-before1of2 {
- *   margin-left: 50%;
- * }
- *
- * .bits-u-before1of3 {         |    .bits-u-before2of3 {
- *   margin-left: 33.33333%;    |      margin-left: 66.66667%;
- * }                            |    }
- *
- * .bits-u-before1of4 {         |    .bits-u-before2of4 {         |    .bits-u-before3of4 {
- *   margin-left: 25%;          |      margin-left: 50%;          |      margin-left: 75%;
- * }                            |    }                            |    }
- *
- * ...
- *
- * .bits-u-before1of12 {       ...   .bits-u-before7of12 {       ...   .bits-u-before11of12 {
- *   margin-left: 8.33333%;    ...     margin-left: 58.33333%;   ...     margin-left: 91.66667%;
- * }                           ...   }                           ...   }
+ * Unique values
  */
+
+$bits-offset-values-unique: ();
 
 @each $columns in $bits-offset-columns {
   @for $position from 1 through $columns - 1 {
-    .#{$bits-utils-ns}u-before#{$position}of#{$columns} {
-      margin-left: percentage(1 / ($columns / $position));
+    $value: percentage(1 / ($columns / $position));
+
+    @if not index($bits-offset-values-unique, $value) {
+      $bits-offset-values-unique: append(
+        $bits-offset-values-unique,
+        $value
+      )
     }
   }
 }
 
-/* Proportional offset after
-   ========================================================================== */
-
 /**
- * Specify the proportional offset after an object.
- * Intentional redundancy build into each set of unit classes.
- *
- * ---------------
- * Example output:
- *
- * .bits-u-after1of2 {
- *   margin-right: 50%;
- * }
- *
- * .bits-u-after1of3 {           |    .bits-u-after2of3 {
- *   margin-right: 33.33333%;    |      margin-right: 66.66667%;
- * }                             |    }
- *
- * .bits-u-after1of4 {           |    .bits-u-after2of4 {           |    .bits-u-after3of4 {
- *   margin-right: 25%;          |      margin-right: 50%;          |      margin-right: 75%;
- * }                             |    }                             |    }
- *
- * ...
- *
- * .bits-u-after1of12 {         ...   .bits-u-after7of12 {         ...   .bits-u-after11of12 {
- *   margin-right: 8.33333%;    ...     margin-right: 58.33333%;   ...     margin-right: 91.66667%;
- * }                            ...   }                            ...   }
+ * Generate 'before' utils
  */
 
-@each $columns in $bits-offset-columns {
-  @for $position from 1 through $columns - 1 {
-    .#{$bits-utils-ns}u-after#{$position}of#{$columns} {
-      margin-right: percentage(1 / ($columns / $position));
+@each $value in $bits-offset-values-unique {
+  $selectors: ();
+
+  @each $columns in $bits-offset-columns {
+    @for $position from 1 through $columns - 1 {
+      $innerValue: percentage(1 / ($columns / $position));
+
+      @if $innerValue == $value {
+        $selectors: $selectors, unquote(".#{$bits-utils-ns}u-before#{$position}of#{$columns}");
+      }
+    }
+  }
+
+  @if length($selectors) > 0 {
+    #{$selectors} {
+      margin-left: $value !important;
+    }
+  }
+}
+
+/**
+ * Generate 'after' utils
+ */
+
+@each $value in $bits-offset-values-unique {
+  $selectors: ();
+
+  @each $columns in $bits-offset-columns {
+    @for $position from 1 through $columns - 1 {
+      $innerValue: percentage(1 / ($columns / $position));
+
+      @if $innerValue == $value {
+        $selectors: $selectors, unquote(".#{$bits-utils-ns}u-after#{$position}of#{$columns}");
+      }
+    }
+  }
+
+  @if length($selectors) > 0 {
+    #{$selectors} {
+      margin-right: $value !important;
     }
   }
 }
