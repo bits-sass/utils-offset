@@ -2,6 +2,7 @@
 
 * Optimize rules generator
 * Add demo page
+* Use new style for comments
 
 === 0.3.2 (July 20, 2013)
 

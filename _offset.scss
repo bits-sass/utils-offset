@@ -2,26 +2,23 @@
    Offset utilities
    ========================================================================== */
 
+/* Variables
+   ========================================================================== */
 
 /**
- * Variables
- *
- * It is recommended to override these.
- *
- * 1. Utility namespace.
+ * Bits.sass utilities namespace
  */
 
-$bits-utils-ns: 'bits-' !default; /* 1 */
+$bits-utils-ns: 'bits-' !default;
 
 /**
- * Offset
- *
- * 1. List of column variations.
+ * List of column variations.
  */
 
-$bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 1 */
+$bits-offset-columns: (2 3 4 5 6 8 10 12) !default;
 
-/* -------------------------------------------------------------------------- */
+/* Utilities
+   ========================================================================== */
 
 /**
  * Proportional offset before
@@ -29,9 +26,7 @@ $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 1 */
  * Specifies the proportional offset before an object.
  * Intentional redundancy build into each set of unit classes.
  *
- * --------------
- * Example usage:
- * --------------
+ * Example HTML:
  *
  * <div class="Module u-size2of4 u-before1of4">
  *   ...
@@ -44,9 +39,7 @@ $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 1 */
  * Specify the proportional offset after an object.
  * Intentional redundancy build into each set of unit classes.
  *
- * --------------
- * Example usage:
- * --------------
+ * Example HTML:
  *
  * <div class="Module u-size1of4 u-after2of4">
  *   ...
@@ -56,10 +49,7 @@ $bits-offset-columns: (2 3 4 5 6 8 10 12) !default; /* 1 */
  * </div>
  */
 
-
-
-/* Utilities generator
-   ========================================================================== */
+/* Utilities generator */
 
 /**
  * Collect unique values
