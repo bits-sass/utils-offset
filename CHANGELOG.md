@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.3 (September 2, 2013)
+
 * Optimize rules generator
 * Add demo page
 * Use new style for comments
